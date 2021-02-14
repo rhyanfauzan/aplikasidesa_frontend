@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="forest_green">#FF015D67</color>
+    <color name="keily_green">#FF00ACB1</color>
+    <color name="mint">#FF87E4DB</color>
+    <color name="pistochia">#FFCAF0C1</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="whitesmoke">#FFEAEAEA</color>
+</resources>
