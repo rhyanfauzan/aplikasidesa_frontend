@@ -3,18 +3,25 @@ package com.ryandev.aplikasidesa;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
+    View btnLog, btnInfo, btnRpjmdes, btnSurat;
+
     private BottomNavigationView.OnNavigationItemSelectedListener navigation = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(MenuItem item) {
-            Fragment f =null;
+            Fragment f = new FragmentHome();
             switch (item.getItemId()){
                 case R.id.menu_home:
                     f = new FragmentHome();
@@ -41,5 +48,27 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottom_nav);
         bottomNavigationView.setOnNavigationItemSelectedListener(navigation);
+
     }
+
+    public void goLog (View view){
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.container_fragment, new FragmentNotif()).commit();
+    }
+
+    public void goInfo (View view){
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.container_fragment, new FragmentInfo()).commit();
+    }
+
+    public void goRpjmdes (View view){
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.container_fragment, new FragmentRpjmdes()).commit();
+    }
+
+    public void goSurat (View view){
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.container_fragment, new FragmentSurat()).commit();
+    }
+
 }

@@ -18,6 +18,9 @@
 
 <!--       Bantuan -->
         <LinearLayout
+            android:id="@+id/bantuan1"
+            android:clickable="true"
+            android:onClick="goInfoDetail"
             android:orientation="vertical"
             android:gravity="center"
             android:layout_marginLeft="32dp"
@@ -45,6 +48,9 @@
 
 <!--       Bantuan -->
         <LinearLayout
+            android:id="@+id/bantuan2"
+            android:clickable="true"
+            android:onClick="goInfoDetail"
             android:orientation="vertical"
             android:gravity="center"
             android:layout_marginLeft="32dp"
@@ -72,6 +78,9 @@
 
 <!--       Bantuan -->
         <LinearLayout
+            android:id="@+id/bantuan3"
+            android:clickable="true"
+            android:onClick="goInfoDetail"
             android:orientation="vertical"
             android:gravity="center"
             android:layout_marginLeft="32dp"

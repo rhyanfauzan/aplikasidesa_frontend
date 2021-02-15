@@ -75,6 +75,9 @@
             android:orientation="horizontal">
 
             <LinearLayout
+                android:id="@+id/btn_log"
+                android:clickable="true"
+                android:onClick="goLog"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_margin="8dp"
@@ -99,6 +102,9 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/btn_info"
+                android:clickable="true"
+                android:onClick="goInfo"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_margin="8dp"
@@ -132,6 +138,9 @@
             android:orientation="horizontal">
 
             <LinearLayout
+                android:id="@+id/btn_rpjmdes"
+                android:clickable="true"
+                android:onClick="goRpjmdes"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_margin="8dp"
@@ -156,6 +165,9 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/btn_surat"
+                android:clickable="true"
+                android:onClick="goSurat"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_margin="8dp"
