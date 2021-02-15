@@ -1,5 +1,6 @@
 package com.ryandev.aplikasidesa;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,12 +10,58 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import java.util.zip.Inflater;
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.models.SlideModel;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class FragmentRpjmdes extends Fragment {
+    ImageSlider imageSlider;
+    View btnSarana, btnKebudayaan, btnSosial, btnKesmas;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_rpjmdes, container, false);
+        View v = inflater.inflate(R.layout.fragment_rpjmdes, container, false);
+        imageSlider = v.findViewById(R.id.imgSlider);
+        btnSarana = v.findViewById(R.id.btn_sarana);
+        btnKebudayaan = v.findViewById(R.id.btn_kebudayaan);
+        btnSosial = v.findViewById(R.id.btn_sosial);
+        btnKesmas = v.findViewById(R.id.btn_kesmas);
+
+        List<SlideModel> slideModelList = new ArrayList<>();
+        slideModelList.add(new SlideModel("https://images.unsplash.com/photo-1562785333-7cd755716611?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80","1 Image"));
+        slideModelList.add(new SlideModel("https://images.unsplash.com/photo-1543804082-5e00fcfc1e66?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fGxvdyUyMHJlc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60","2 Image"));
+        slideModelList.add(new SlideModel("https://images.unsplash.com/photo-1562785329-80a4a586dfcb?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=889&q=80","3 Image"));
+        slideModelList.add(new SlideModel("https://images.unsplash.com/photo-1578238888989-e2ed6f017383?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80","4 Image"));
+        imageSlider.setImageList(slideModelList, true);
+
+        btnSarana.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), RpjmdesDetail.class));
+            }
+        });
+        btnKebudayaan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), RpjmdesDetail.class));
+            }
+        });
+        btnSosial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), RpjmdesDetail.class));
+            }
+        });
+        btnKesmas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), RpjmdesDetail.class));
+            }
+        });
+
+        return v;
     }
 }

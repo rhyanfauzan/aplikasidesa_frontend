@@ -2,18 +2,108 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/whitesmoke"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InfoBantuanDetail">
 
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/custom_jumbotron_bg"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
+        android:id="@+id/nama_bantuan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Info Bantuan"
-        android:textColor="#252525"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Bantuan UMKM"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/gambar_bantuan"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_umkm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nama_bantuan" />
+
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@id/gambar_bantuan"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custom_menu_radius"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:padding="24dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#252525"
+            android:fontFamily="@font/roboto_regular"
+            android:text="BLT UMKM atau Banpres Produktif atau Bantuan Produktif Usaha Mikro ( BPUM) merupakan bantuan yang diberikan kepada para pelaku Usaha Mikro Kecil Menengah (UMKM) di Indonesia."
+            />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="#252525"
+            android:text="Persyaratan :"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="#252525"
+            android:text="1. Memiliki usaha berskala mikro
+            \n2. WNI
+            \n3. Bukan ASN (Aparatur Sipil Negara),
+            \nTNI/Polri, pegawai BUMN/BUMD
+            \n4. Tidak sedang memiliki pinjaman di bank
+            dan Kredit Usaha Rakyat (KUR)"
+            />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="#252525"
+            android:text="Cara Mendapatkan :"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="#252525"
+            android:text="Selanjutnya, calon penerima harus
+mendaftarkan diri ke Kepala Dinas
+Koperasi Usaha Kecil Menengah
+kabupaten/kota di wilayah masing-masing.
+Setelah membawa sejumlah berkas dan
+melakukan proses pengajuan, maka calon
+penerima akan menunggu, apakah
+pengajuannya diterima atau ditolak.
+Jika diterima, calon penerima akan
+mendapatkan SMS dari bank penyalur BLT
+UMKM untuk mencairkan dana bantuan."
+            />
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
