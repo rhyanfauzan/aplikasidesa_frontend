@@ -19,7 +19,7 @@
             android:src="@drawable/ic_welcome"/>
         <TextView
             android:layout_marginTop="32dp"
-            android:textSize="28sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             android:fontFamily="@font/montserrat_bold"
             android:textColor="@color/keily_green"
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:text="Selamat Datang!"/>
         <TextView
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:fontFamily="@font/montserrat_regular"
             android:textColor="@color/forest_green"
             android:layout_width="wrap_content"

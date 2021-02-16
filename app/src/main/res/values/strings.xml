@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Aplikasi Desa</string>
+    <string-array name="opsi_keperluan_spinner">
+        <item>Membuat Surat Keterangan Usaha</item>
+        <item>Membuat Kartu Tanda Penduduk</item>
+        <item>Membuat Kartu Keluarga</item>
+        <item>Membuat Surat Keterangan Tidak Mampu</item>
+    </string-array>
 </resources>
