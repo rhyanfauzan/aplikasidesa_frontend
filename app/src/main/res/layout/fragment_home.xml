@@ -9,191 +9,228 @@
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="320dp"
         android:background="@drawable/custom_jumbotron_bg"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <TextView
+        android:id="@+id/nama_desa"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/custom_bg_desa"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/keily_green"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Desa Cibiru"/>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/tv_username"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="32dp"
-            android:layout_marginBottom="8dp"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="Nama User"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_user"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="32dp" />
 
-        <TextView
-            android:id="@+id/tv_nik"
+        <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="32dp"
-            android:fontFamily="@font/roboto_regular"
-            android:text="3213010101010001"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv_desa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="32dp"
-            android:fontFamily="@font/roboto_regular"
-            android:text="Desa Cibiru"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Nama User"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_nik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="3213010101010001"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 
 <!--    Menu-->
     <LinearLayout
+        android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginBottom="65dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imgSlider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view">
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
 
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:background="@color/white"
             android:gravity="center"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:id="@+id/btn_log"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:clickable="true"
-                android:onClick="goLog"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_margin="8dp"
-                android:padding="16dp"
-                android:background="@drawable/custom_menu_radius"
+                android:layout_margin="2dp"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:onClick="goLog"
+                android:orientation="vertical"
+                android:padding="3dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="70dp"
+                    android:layout_height="30dp"
                     android:src="@drawable/ic_pelayanan" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="6dp"
                     android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:text="Log Pelayanan"
                     android:textColor="#252525"
-                    android:text="Log Pelayanan" />
+                    android:textSize="10sp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/btn_info"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:clickable="true"
+                android:layout_margin="2dp"
+                android:gravity="center"
                 android:onClick="goInfo"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_margin="8dp"
-                android:padding="16dp"
-                android:background="@drawable/custom_menu_radius"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="3dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="70dp"
+                    android:layout_height="30dp"
                     android:src="@drawable/ic_info" />
 
                 <TextView
-                    android:gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:textColor="#252525"
+                    android:layout_marginTop="6dp"
                     android:fontFamily="@font/montserrat_bold"
-                    android:text="Informasi Bantuan" />
+                    android:gravity="center"
+                    android:text="Info Bantuan"
+                    android:textColor="#252525"
+                    android:textSize="10sp" />
 
             </LinearLayout>
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-
             <LinearLayout
                 android:id="@+id/btn_rpjmdes"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:clickable="true"
-                android:onClick="goRpjmdes"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_margin="8dp"
-                android:padding="16dp"
-                android:background="@drawable/custom_menu_radius"
+                android:layout_margin="2dp"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:onClick="goRpjmdes"
+                android:orientation="vertical"
+                android:padding="3dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="70dp"
+                    android:layout_height="30dp"
                     android:src="@drawable/ic_rpjmdes" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:textColor="#252525"
+                    android:layout_marginTop="6dp"
                     android:fontFamily="@font/montserrat_bold"
-                    android:text="Info RPJMDES" />
+                    android:gravity="center"
+                    android:text="Info RPJMDES"
+                    android:textColor="#252525"
+                    android:textSize="10sp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/btn_surat"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:clickable="true"
-                android:onClick="goSurat"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_margin="8dp"
-                android:padding="16dp"
-                android:background="@drawable/custom_menu_radius"
+                android:layout_margin="2dp"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:onClick="goSurat"
+                android:orientation="vertical"
+                android:padding="3dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="70dp"
+                    android:layout_height="30dp"
                     android:src="@drawable/ic_surat" />
 
                 <TextView
-                    android:gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:textColor="#252525"
+                    android:layout_marginTop="6dp"
                     android:fontFamily="@font/montserrat_bold"
-                    android:text="Layanan Surat-menyurat" />
+                    android:gravity="center"
+                    android:text="Layanan Persuratan"
+                    android:textColor="#252525"
+                    android:textSize="10sp" />
 
             </LinearLayout>
 
+
         </LinearLayout>
 
+
     </LinearLayout>
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/imgSlider"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="30dp"
+        app:auto_cycle="true"
+        app:corner_radius="5"
+        app:delay="0"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:period="1000"></com.denzcoskun.imageslider.ImageSlider>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

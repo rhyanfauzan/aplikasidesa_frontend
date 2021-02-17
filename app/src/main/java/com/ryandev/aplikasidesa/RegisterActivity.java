@@ -1,28 +1,30 @@
 package com.ryandev.aplikasidesa;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
+public class RegisterActivity extends AppCompatActivity {
 
-public class SplashScreen extends AppCompatActivity {
-    Button btnLanjut;
+    Button btnDaftar;
     TextView btnLogin;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.splash_screen);
+        setContentView(R.layout.activity_register);
 
-        btnLanjut = findViewById(R.id.lanjutkan);
+        btnDaftar = findViewById(R.id.daftar_btn);
         btnLogin = findViewById(R.id.go_login_btn);
 
-        btnLanjut.setOnClickListener(new View.OnClickListener() {
+        btnDaftar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
@@ -30,11 +32,9 @@ public class SplashScreen extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SplashScreen.this, LoginActivity.class);
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
-
     }
-
 }

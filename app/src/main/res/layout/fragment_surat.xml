@@ -12,61 +12,73 @@
         android:text="Form Data Persuratan"
         android:textColor="#252525"
         android:textSize="24sp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="60dp"
         android:fontFamily="@font/roboto_bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/linearLayout4"
+        android:id="@+id/data_surat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginRight="32dp"
+        android:layout_margin="32dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toBottomOf="@id/btn_submit_surat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/judul_halsurat">
 
-        <Spinner
-            android:id="@+id/opsi_keperluan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:entries="@array/opsi_keperluan_spinner" />
-
-        <view
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="8dp"
-            android:background="#252525" />
-
-        <TextView
+        <EditText
+            android:id="@+id/keperluan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Upload Dokumen (Scan)"
-            android:textColor="#252525"
-            android:textSize="16sp" />
+            android:background="@color/white"
+            android:hint="Jenis Keperluan" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#252525" />
+
+        <LinearLayout
+            android:id="@+id/upload_dokumen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/ic_upload" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Upload Dokumen"
+                android:textColor="#252525" />
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_submit_surat"
+        android:clickable="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:background="@drawable/custom_btn_bg"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
         android:text="Submit"
-        android:textAllCaps="false"
-        android:paddingLeft="60dp"
-        android:paddingRight="60dp"
-        android:fontFamily="@font/roboto_bold"
-        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/data_surat" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
