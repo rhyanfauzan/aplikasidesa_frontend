@@ -26,7 +26,7 @@
         android:paddingRight="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Desa Cibiru"/>
+        android:text="Desa Cileles"/>
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -51,14 +51,13 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="32dp"
             android:layout_marginTop="16dp"
-            android:gravity="center"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tv_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="2dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:text="Nama User"
                 android:textColor="@color/white"

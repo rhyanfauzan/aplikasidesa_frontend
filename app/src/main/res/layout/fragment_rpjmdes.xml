@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/whitesmoke"
@@ -8,7 +8,7 @@
 
     <com.denzcoskun.imageslider.ImageSlider
         android:id="@+id/imgSlider"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_alignParentTop="true"
         app:auto_cycle="true"
         app:delay="0"
         app:period="1000"
@@ -18,125 +18,156 @@
     </com.denzcoskun.imageslider.ImageSlider>
 
 
-    <!--    Menu-->
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgSlider">
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:layout_below="@+id/imgSlider"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true">
 
+        <!--    Menu-->
         <LinearLayout
-            android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgSlider">
 
             <LinearLayout
-                android:id="@+id/btn_sarana"
-                android:clickable="true"
-                android:onClick="goSarana"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_margin="8dp"
-                android:padding="16dp"
-                android:background="@drawable/custom_menu_radius"
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <LinearLayout
+                    android:id="@+id/btn_sarana"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/custom_menu_radius"
+                    android:clickable="true"
                     android:gravity="center"
-                    android:layout_marginTop="12dp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:textColor="#252525"
-                    android:text="Sarana Prasarana" />
+                    android:onClick="goSarana"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/ic_sarana" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:gravity="center"
+                        android:text="Sarana Prasarana"
+                        android:textColor="#252525" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_kebudayaan"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/custom_menu_radius"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="goKebudayaan"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/ic_kebudayaan" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:gravity="center"
+                        android:text="Kebudayaan"
+                        android:textColor="#252525" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/btn_kebudayaan"
-                android:clickable="true"
-                android:onClick="goKebudayaan"
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_margin="8dp"
-                android:padding="16dp"
-                android:background="@drawable/custom_menu_radius"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
-                <TextView
+                <LinearLayout
+                    android:id="@+id/btn_sosial"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/custom_menu_radius"
+                    android:clickable="true"
                     android:gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:textColor="#252525"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:text="Kebudayaan" />
+                    android:onClick="goSosial"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/ic_sosial" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Sosial"
+                        android:textColor="#252525" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_kesmas"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/custom_menu_radius"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="goKesmas"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/ic_kesehatan" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:gravity="center"
+                        android:text="Kesehatan Masyarakat"
+                        android:textColor="#252525" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/linearLayout3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
+    </ScrollView>
 
-            <LinearLayout
-                android:id="@+id/btn_sosial"
-                android:clickable="true"
-                android:onClick="goSosial"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_margin="8dp"
-                android:padding="16dp"
-                android:background="@drawable/custom_menu_radius"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:textColor="#252525"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:text="Sosial" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/btn_kesmas"
-                android:clickable="true"
-                android:onClick="goKesmas"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_margin="8dp"
-                android:padding="16dp"
-                android:background="@drawable/custom_menu_radius"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:textColor="#252525"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:text="Kesehatan Masyarakat" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

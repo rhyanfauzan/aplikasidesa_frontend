@@ -15,37 +15,47 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/nama_bantuan"
+        android:id="@+id/nama_sarana"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="Sarana Prasarana"
         android:textColor="@color/white"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@id/view"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageSarana"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_sarana"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/nama_sarana"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <LinearLayout
-        app:layout_constraintTop_toBottomOf="@id/view"
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:background="@drawable/custom_menu_radius"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:padding="24dp"
         android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:padding="24dp"
+        app:layout_constraintTop_toBottomOf="@id/imageSarana"
+        tools:layout_editor_absoluteX="32dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_regular"
-            android:textColor="#252525"
             android:text="Selain sebagai faktor penunjang kemajuan sebuah desa, sarana dan prasarana juga menjadi salah satu faktor yang dapat membantu keberlangsungan kehidupan masyarakat. Di Desa sendiri, potensi sarana dan prasarana sudah cukupvbaik dan dapat memenuhi kebutuhanvmasyarakat. Beberapa sarana dan prasarana mulai dari kesehatan, pendidikan, transportasi dan lain-lain sudah dibangun dan akan terus dilanjutkan agar dapat memenuhi kebutuhan masyarakat dan menunjang mobilitas perekonomian di Desa."
-            />
-
+            android:textColor="#252525" />
 
 
     </LinearLayout>
